@@ -1,27 +1,23 @@
-import React from 'react';
-import { useState } from 'react';
-import {StyleSheet,Button, Text, View, Image} from 'react-native';
+import React, { useState } from 'react'
+import {Image, View, TouchableOpacity} from 'react-native';
 
 const Foco = () => {
-    const [FocoOn, setFoco] = useState(true);
 
-  return(
-<View>
-    
-     <Text > {FocoOn ? <Image
-          style={{ width: 150, height: 150 }}
-          resizeMode='contain'
-          source={require('../Img/focoOn.png')}
-        /> :
-        <Image
-          style={{ width: 150, height: 150 }}
-          resizeMode='contain'
-          source={require('../Img/focoOff.png')}
-        />
-        }</Text> 
-<Button title ="Prender/Apagar" onPress={()=>{setFoco(!FocoOn)}}/>
-  </View>
-  );
-};
+  const [estatus, setEstatus] = useState(false);
 
-export default Foco;
+  return (
+    <View>
+
+      <TouchableOpacity onPress={ ()=> { setEstatus(!estatus) }  }>
+
+          <Image source={ estatus ?  require('../Img/focoOn.png') : require('../Img/focoOff.png') } 
+              style={{ width: 300, height: 300}}
+          />
+
+      </TouchableOpacity>
+
+    </View>
+  )
+}
+
+export default Foco

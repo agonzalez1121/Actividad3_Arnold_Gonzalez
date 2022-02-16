@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Foco from './src/Components/Foco';
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#C2FFF6',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
