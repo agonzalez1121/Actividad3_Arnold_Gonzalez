@@ -11,7 +11,7 @@ const Foco = () => {
       <TouchableOpacity onPress={ ()=> { setEstatus(!estatus) }  }>
 
           <Image source={ estatus ?  require('../Img/focoOn.png') : require('../Img/focoOff.png') } 
-              style={{ width: 300, height: 300}}
+              style={{ width: 250, height: 400}}
           />
 
       </TouchableOpacity>
